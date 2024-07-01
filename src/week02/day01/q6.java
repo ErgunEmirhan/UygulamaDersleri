@@ -17,6 +17,6 @@ public class q6 {
 			System.out.println("false");
 		}
 		
-		System.out.println(a + b);
+		System.out.println((a + b) / 2.0);
 	}
 }
