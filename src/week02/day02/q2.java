@@ -6,7 +6,7 @@ public class q2 {
 	 */
 	public static void main(String[] args) {
 		char i;
-		for (i = 97; i <123; i++){
+		for (i = 'a'; i-1 < 'z'; i++){
 			System.out.print(i + " ");
 		}
 	}
