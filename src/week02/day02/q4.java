@@ -15,7 +15,7 @@ public class q4 {
 		number = sc1.nextInt();
 		
 		for (i = 0; i < 11; i++){
-			System.out.println(number + "x" + i + " = " + number*i);
+			System.out.println(number + "x" + i + " = " + number * i);
 		}
 	}
 }

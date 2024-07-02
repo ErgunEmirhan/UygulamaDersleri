@@ -7,12 +7,13 @@ public class q7 {
 	7- Girilen sayının 5'in kuvveti olup olmadığını bulan program.
 	 */
 	public static void main(String[] args) {
-		float number, temp;
+		int number;
+		float temp;
 		
 		Scanner sc1 = new Scanner(System.in);
 		
 		System.out.print("Sayi giriniz> ");
-		number = sc1.nextFloat();
+		number = sc1.nextInt();
 		temp = number;
 		while (temp > 1){
 			temp /= 5;
