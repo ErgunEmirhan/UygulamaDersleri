@@ -17,7 +17,7 @@ public class q1 {
 		System.out.print("Kuvveti gir> ");
 		power = sc1.nextInt();
 		
-		for(result = 1;power != 0; power--){
+		for(result = 1; power != 0; power--){
 			result *= base;
 		}
 		
@@ -26,5 +26,6 @@ public class q1 {
 		name = sc1.nextLine();
 		
 		System.out.println(name + " " + result);
+		// veya result = Math.pow(base, power);
 	}
 }
