@@ -12,7 +12,7 @@ public class q10 {
 		number = sc.nextDouble();
 		temp = number;
 		
-		while (!(temp < 1)){
+		while (temp != 0){
 			total += (temp % 10);
 			temp /= 10;
 		}
