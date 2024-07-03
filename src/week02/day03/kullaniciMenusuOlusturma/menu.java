@@ -56,6 +56,7 @@ public class menu {
 					else System.out.println(number + " sayisi asal degildir. ");
 				}
 				else if (command != 0) System.out.println("Duzgun bir deger girmeniz rica olunur. ");
+				else System.out.println("Program sonlandirilmistir!  Yine bekleriz. ");
 			}
 		}
 		else if (language == 2){
@@ -96,6 +97,7 @@ public class menu {
 					else System.out.println(number + " is not prime. ");
 				}
 				else if (command != 0) System.out.println("Please enter a decent digit. ");
+				else System.out.println("The session hes been terminated.  We wish to see you soon!");
 			}
 		}
 		else System.out.println("Benim haznemde o dil mevcut bulunmamaktadır./ Which language is that supposed to be?" +
