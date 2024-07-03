@@ -19,15 +19,19 @@ public class menu {
 		System.out.println("Rica ederiz ki size hizmet verecegimiz lisanı buyurunuz./ Choose language.");
 		System.out.print("1. Turkce(TR) \n2. English(EN)\n>");
 		language = sc.nextByte();
+		// Türkçe menü
 		if (language == 1){
 			while (command != 0){
+				// Ana menü
 				System.out.print("------------\n0. Cikis yap.\n1. Merhaba Dunya yazdir.\n2. Faktoriyel hesapla.\n3. " +
 						                 "Asal sayi " +
 						                 "kontrolu yap.\n-------------\n>");
 				command = sc.nextByte();
+				// Merhaba Dünya yazdır
 				if (command == 1){
 					System.out.println("Merhaba Dunya");
 				}
+				// Faktöriyel
 				else if (command == 2){
 					System.out.print("Hangi sayinin faktoriyelini alayim?> ");
 					number = sc.nextInt();
@@ -37,6 +41,7 @@ public class menu {
 					System.out.println(number + " sayisinin faktoriyeli: " + fak);
 					i = 0;
 				}
+				// Asallık kontrolü
 				else if (command == 3){
 					System.out.print("Hangi sayinin asalligini kontrol edeyim?> ");
 					number = sc.nextInt();
@@ -55,18 +60,23 @@ public class menu {
 					if (isPrime) System.out.println(number + " sayisi asaldir. ");
 					else System.out.println(number + " sayisi asal degildir. ");
 				}
+				// 0 ve acayip değerlere el atma
 				else if (command != 0) System.out.println("Duzgun bir deger girmeniz rica olunur. ");
 				else System.out.println("Program sonlandirilmistir!  Yine bekleriz. ");
 			}
 		}
+		// İngilizce menü
 		else if (language == 2){
 			while (command != 0){
+				// Ana menü
 				System.out.print("------------\n0. Exit.\n1. Print Hello World.\n2. Calculate factorial.\n3. " +
 						                 "Check if the number is prime.\n-------------\n>");
 				command = sc.nextByte();
+				// hello world
 				if (command == 1){
 					System.out.println("Hello World");
 				}
+				// faktöriyel
 				else if (command == 2){
 					System.out.print("The factorial of which number shall be taken?> ");
 					number = sc.nextInt();
@@ -76,6 +86,7 @@ public class menu {
 					System.out.println("The factorial of "+ number + " is : " + fak);
 					i = 0;
 				}
+				// asallık testi
 				else if (command == 3){
 					System.out.print("The primality of which number shall be checked?> ");
 					number = sc.nextInt();
@@ -96,10 +107,12 @@ public class menu {
 					if (isPrime) System.out.println(number + " is prime. ");
 					else System.out.println(number + " is not prime. ");
 				}
+				// 0 ve acayip değerlere el atma
 				else if (command != 0) System.out.println("Please enter a decent digit. ");
 				else System.out.println("The session hes been terminated.  We wish to see you soon!");
 			}
 		}
+		// Saçma sayı girişine el atma
 		else System.out.println("Benim haznemde o dil mevcut bulunmamaktadır./ Which language is that supposed to be?" +
 				                        " ");
 	}
