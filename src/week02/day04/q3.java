@@ -9,7 +9,6 @@ public class q3 {
 		// virgülün index'ini al oraya kadar olanı yazdır.  Başlangıç noktasını güncelle
 		
 		int min=0, max, i;
-		
 		for (i = 0; i < kelime.length(); i++){
 			if (kelime.charAt(i) == ','){
 				max = i;

@@ -1,0 +1,134 @@
+koddaki hataya alt+enter yaparak çözüm önerisi alabiliyoruz / importladığımız bir şeye ctrl + sol tık yaparak kaynak kodu görebiliyoruz / ctrl + alt + l ile kodunu hizalayabilirsin
+^ --> XOR  &&: ilk çıkan yanlışta kontrolü kesip false döner, &'in aksine.
+Overload: + hem concat hem de sayısal toplama yapar(overload) ama concat önceliklidir.
+ide’de solda kırmızı daireler breakpoint, debug yaparken kullanılıyor
+fori
+
+char x = 'a';
+1- x += 1; // x = 'b'
+2- x++; // x = 'b'
+3- x = x + 1 // x = 68 mi ne (yani int'e dönüşür çünkü toplamada default int'tir)
+
+int i = sc.nextInt(); sc.nextLine(); ...;
+
+işlemde 1- double / 2- float / 3- long varsa işlemin sonucu da o cinsten olur, gerisi integer olur
+
+int i; ...; final i = 5; dedikten sonra i'nin değeri değişmez vs. / final int b; ...; b = 4; şeklinde ilk final diyip değeri sonradan da atayabilirz
+
+Math.PI diyerek yeni obje oluşturmayız, her Math.PI dediğimizde aynı yere referans veririz çünkü static keyword'ü kullanılmıştır bu metod için.
+
+5_000_000_000 denktir 5000000000'e vs.
+
+Casting Hata #1: int i = (int)i + d; // d double ise işlemin sonucu double çıkar ama i'ye int dediğimiz için hata verir
+doğrusu:i = (int)(i+d)
+Casting Hata #2: byte b1=8, b2=5, b3; b3 = b2 + b1; // sağ taraf int'e dönüşecektir yani hata verir
+
+Ternary Operator: var a = (boolean) ? (true case) : (false case); // ternary ile değer ataması yapılır başka bir şey yapılmaz
+ternary içine ternary girebilirsin ama okuması zor, yapma
+
+Scanner sc = new Scanner(System.in); ...; sc.close();
+
+for(x;y;z){
+    ...;
+} // x--> ilk değer ataması, y--> boolean, döngü devam koşulu, z--> artırma azaltma vs konur (x, y ve z boş bırakılabilir)
+
+if (boolean) ...; //tek satırlık if kodu
+
+Bellek: Stack ve Heap.  Heap: değerleri tutar. Stack: değişken ismini tutar. (primitive type'lar heap'te tutulmaz)
+
+switch(x){
+    case i1:
+        ...;
+    case i2:
+        ...;
+    default:
+        ...;
+} // en az 2 case olmalı yoksa saçma, default zorunlu değil. case'e girmek için x == i doğru olmalı.  bir case'e girildiğinde altındaki tüm case'lere girilir ama engellemek için break; koyabilirsin
+
+swtich ile değer ataaybilrisin!
+String ay = switch(month){
+    case 1 -> "Ocak";
+    case 2 -> "Şubat";
+    ...;
+    case 13, 14, 15 -> "Nasıl yani?"
+    default -> "Yanlış ay girildi"
+}; // month == 1 falan kontrol edilir. burada break; gerekmez, otomatik yapar.  sona ; konmalı
+
+hem değer atayıp hem birden fazla işlem yapmak istiyom
+int sonuc = switch(n){
+    case 1 -> {
+    result = sayi1 + sayi2;
+    yield result;
+    }
+    case 2...
+}
+
+
+
+
+String a = " gsds ";
+//          012345
+val c = a.charAt(3); // girilen index'teki karakteri döner
+// c = 'd'
+val c2 = a.trim();  // kırpar
+// c2 = "gsds"
+val c3 = a.length();
+// c3 = 6
+val c4 = a.indexOf('s');
+// c4 = 2 çünkü s harfi ilk 2. index'te görülür
+// içinde aradığımız harf yoksa -1 döner
+val c5 = a.lastIndexOf('s');
+// c5 = 4 çünkü 's' en son 4. index'te görülür
+// içinde aradığımız harf yoksa -1 döner
+val c6 = a.substring(beginIndex:2); val c7 = a.substring(1,3);
+// c6 = "sds " c7 = "gsd"
+val c7 = a.replace(target:'s', replacement: "\n");
+// c7 = " g
+d
+ "
+
+
+
+
+ while (num = sc.nextInt() != 0) {
+ 			toplam += sayi;
+ 			System.out.println("Bir syai girniz");
+ 		}
+ // döngüde boolean değere bakarken değer atayabiliyoruz
+
+
+
+
+ try{
+ 	girdi.charAt(count);
+ 	count++;
+ 	sout(count);
+ }
+ catch (Exception e) {
+ 	break;
+ }
+ // farklı hatalara farklı yönlendirmeler yapılabilir ama burada genel olarak hata yakalamaya ayarladık
+
+
+
+
+ do{
+ 	//yapılacak işlemler
+ } while(boolean);
+ // koşul sağlanmasa bile en az bir kez çalışır, while'dan sonra gelen ; unutma
+
+
+
+
+ //for içinde iki veya daha fazla sayac barınabilir.
+ int i, j;
+
+ for (i= 0, j= 4; i < 5 && j > 2; i++, j += 2){
+ 	//kod
+ }
+
+
+
+ System.exit(status: 1);
+ // JVM kapatır.  status dediğimiz şey hangi exit code ile sistemin kapatıldığıdır
+ // Bizim System dediğimiz şey JVM'dir.
