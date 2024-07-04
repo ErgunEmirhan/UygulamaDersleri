@@ -17,7 +17,7 @@ public class menu {
 		
 		System.out.println("Zatı muhtereminizin tesrifi bizi onore etti!/ Welcome!");
 		System.out.println("Rica ederiz ki size hizmet verecegimiz lisanı buyurunuz./ Choose language.");
-		System.out.print("1. Turkce(TR) \n2. English(EN)\n>");
+		System.out.print("1. Turkce(TR) \n2. English(EN)\n> ");
 		language = sc.nextByte();
 		// Türkçe menü
 		if (language == 1){
@@ -25,7 +25,7 @@ public class menu {
 				// Ana menü
 				System.out.print("------------\n0. Cikis yap.\n1. Merhaba Dunya yazdir.\n2. Faktoriyel hesapla.\n3. " +
 						                 "Asal sayi " +
-						                 "kontrolu yap.\n-------------\n>");
+						                 "kontrolu yap.\n-------------\n> ");
 				command = sc.nextByte();
 				// Merhaba Dünya yazdır
 				if (command == 1){
@@ -70,7 +70,7 @@ public class menu {
 			while (command != 0){
 				// Ana menü
 				System.out.print("------------\n0. Exit.\n1. Print Hello World.\n2. Calculate factorial.\n3. " +
-						                 "Check if the number is prime.\n-------------\n>");
+						                 "Check if the number is prime.\n-------------\n> ");
 				command = sc.nextByte();
 				// hello world
 				if (command == 1){
