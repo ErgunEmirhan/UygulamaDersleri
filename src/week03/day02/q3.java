@@ -6,7 +6,7 @@ public class q3 {
 -> 120, 130, 125, -256, 16, 1300, 1258, 81, 14
 	 */
 	public static void main(String[] args) {
-		int[] arrInt = {120, 130, 125, -256, 16, 1300, 1258, 81, 14};
+		int[] arrInt = {1350, 120, 130, 125, -256, 16, 1300, 1258, 81, 14};
 		int max1 = Integer.MIN_VALUE, max2 = Integer.MAX_VALUE;
 		for (int i = 0; i < arrInt.length; i++) {
 			if (arrInt[i] > max1){

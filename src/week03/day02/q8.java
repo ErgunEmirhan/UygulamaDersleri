@@ -18,9 +18,13 @@ Aşağdaki şehirler tek bir String degerdir.
 		int minStr = -1;
 		int arrCount = 0;
 		int hypStr = 0;
+		int arrLength = 0;
+		for (int i = 0; i < input.length(); i++) {
+			if (input.charAt(i) == ';') arrLength += 1;
+		}
 		// Şehir isimleri için arrStr, plaka kodları için arrNum
-		String[] arrStr = new String[input.length()];
-		String[] arrNum = new String[input.length()];
+		String[] arrStr = new String[arrLength];
+		String[] arrNum = new String[arrLength];
 		//ilk plaka alır, sonra şehir alır.  Şehir aldığında arrCount++
 		for (int i = 0; i < input.length(); i++) {
 			if (input.charAt(i) == '-'){
