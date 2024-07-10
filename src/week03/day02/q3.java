@@ -1,5 +1,8 @@
 package week03.day02;
 
+import java.util.Arrays;
+import java.util.List;
+
 public class q3 {
 	/*
 	3- Dizideki en buyuk 2. sayiyi bulalim.
@@ -18,5 +21,11 @@ public class q3 {
 		}
 		
 		System.out.println("Maks degerimiz: " + max1 + " ve en buyuk ikinci degerimiz: " + max2);
+		
+		Integer[] arrint = {1350, 120, 130, 125, -256, 16, 1300, 1258, 81, 14};
+		List<int[]> lit = Arrays.asList(arrInt);
+		System.out.println(lit);
+		List<Integer> lit2 = Arrays.asList(arrint);
+		System.out.println(lit2);
 	}
 }
