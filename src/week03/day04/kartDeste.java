@@ -8,6 +8,8 @@ public class kartDeste {
 	papazKacti metodu yazılsın, metod destedeki maça papazı dışındaki papazlar çıkartsın.
 	Altmışaltı oyununu oynamak için altmisAlti metodu ile destede sadece 9, 10, Vale, Dam, Papa ve As bırakılsın (her renkten).
 	Örnek kart string'i: "Maça 6", "Sinek V"
+	String[] suit = new String[]{"Maça", "Kupa", "Karo", "Sinek"};
+	String[] number = new String[]{"2","3","4","5","6", "7", "8", "9", "T", "V", "D", "P", "A"};
 	 */
 	public static void main(String[] args) {
 		String[] deck = deste();
@@ -22,7 +24,7 @@ public class kartDeste {
 		String[] tempArr = new String[24];
 		int tempIdx = 0;
 		for (String card: deck){
-			for (String number: new String[]{"9", "T", "V", "D", "R", "A"}) {
+			for (String number: new String[]{"9", "T", "V", "D", "P", "A"}) {
 				if (card.split(" ")[1].equals(number)) {
 					tempArr[tempIdx] = card;
 					tempIdx++;
@@ -35,8 +37,8 @@ public class kartDeste {
 	
 	
 	static String[] deste(){
-		String[] suit = new String[]{"Pik", "Kör", "Karo", "Trefl"};
-		String[] number = new String[]{"2","3","4","5","6", "7", "8", "9", "T", "V", "D", "R", "A"};
+		String[] suit = new String[]{"Maça", "Kupa", "Karo", "Sinek"};
+		String[] number = new String[]{"2","3","4","5","6", "7", "8", "9", "T", "V", "D", "P", "A"};
 		String[] deck = new String[suit.length*number.length];
 		for (int i = 0; i < suit.length; i++) {
 			for (int j = 0; j < number.length; j++) {
@@ -50,7 +52,7 @@ public class kartDeste {
 		String[] tempArr = new String[49];
 		int tempIdx = 0;
 		for (String card: deck){
-			if(!(!card.split(" ")[0].equals("Pik") && card.split(" ")[1].equals("R"))) {
+			if(!(!card.split(" ")[0].equals("Maça") && card.split(" ")[1].equals("P"))) {
 				tempArr[tempIdx] = card;
 				tempIdx++;
 			}
