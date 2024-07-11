@@ -10,11 +10,11 @@ başka bir diziye atsın ve o diziyi yazdırsın.
 	
 	// ?
 	public static void main(String[] args) {
-	printOdd(3, 5, 6, 1, 2, 6, 343,7 ,14, 124);
+	int[] ar = printOdd(3, 5, 6, 1, 2, 6, 343,7 ,14, 124);
 	}
 	
 	
-	public static void printOdd(int... numbers){
+	public static int[] printOdd(int... numbers){
 		int[] oddArr = new int[numbers.length];
 		int count = 0;
 		for (int number: numbers){
@@ -24,5 +24,6 @@ başka bir diziye atsın ve o diziyi yazdırsın.
 			}
 		}
 		System.out.println(Arrays.toString(Arrays.copyOfRange(oddArr, 0, count)));
+		return oddArr;
 	}
 }
