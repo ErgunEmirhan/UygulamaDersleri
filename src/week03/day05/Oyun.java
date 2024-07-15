@@ -32,10 +32,13 @@ public class Oyun {
 		
 	}
 	
+	// kullanıcının sayısı, bilgisayarın sayısı ve sonuc tablosu girilir, değerlendirme yapılıp çıktılar verilir
+	// ve güncel sonuç tablosu dönülür
 	static int[] degerlendirme(int moveUser, int moveCpu, int[] sonuclar){
 		String[] arr = new String[]{"Tas", "Kagit", "Makas"};
 		int modulo = ((moveUser-moveCpu+3)%3);
 		sonuclar[2] += 1;
+		// kaybetmek için modulus -1 yani 2 olmalı, beraberlik için 0 ve kaznmak için 1 olmalı
 		switch (modulo){
 			case 2:
 				sonuclar[1] += 1;
@@ -63,6 +66,8 @@ public class Oyun {
 		}
 		return sonuclar;
 	}
+	//kullanıcıdan 1-2-3-4 alacağız, başka bir şey verirse uyarırız (try catch ile byte girişi kontrol edilir, if ile
+	// 1<=x<=4 bakılır
 	static byte degerAl(){
 		Scanner sc = new Scanner(System.in);
 		byte moveUser;
