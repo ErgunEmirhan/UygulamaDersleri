@@ -7,7 +7,7 @@ public class kartDeste {
 	52'lik iskambil destesi oluşturup deste karıştırılsın.  Deste oluşturulurken 4 renk için String array ve 13 sayı için String array açılıp for döngüleriyle birleştirilip deste array'i oluşturulsun.  en son elimizde String[] olsun, String[][] olmasın.
 	papazKacti metodu yazılsın, metod destedeki maça papazı dışındaki papazlar çıkartsın.
 	Altmışaltı oyununu oynamak için altmisAlti metodu ile destede sadece 9, 10, Vale, Dam, Papa ve As bırakılsın (her renkten).
-	Örnek kart string'i: "Maça 6", "Sinek V"
+	Örnek kart string'i: "Maça 6", "Sinek J"
 	String[] suit = new String[]{"Maça", "Kupa", "Karo", "Sinek"};
 	String[] number = new String[]{"2","3","4","5","6", "7", "8", "9", "T", "J", "Q", "K", "A"};
 	 */
@@ -18,6 +18,7 @@ public class kartDeste {
 		System.out.println(Arrays.toString(papazOyunu));
 		String[] _66 = altmisAlti(deck);
 		System.out.println(Arrays.toString(_66));
+		
 	}
 	
 	
@@ -43,7 +44,11 @@ public class kartDeste {
 		String[] tempArr = new String[49];
 		int tempIdx = 0;
 		for (String card: deck){
-			if(!(!card.split(" ")[0].equals("Maça") && card.split(" ")[1].equals("K"))) {
+			//if(!(
+			// (!card.split(" ")[0].equals("Maça") )
+			// &&
+			// card.split(" ")[1].equals("K"))) { // maça değil ve papaz ise
+			if (!card.equals("Karo K") && !card.equals("Sinek K") && !card.equals("Kupa K")){
 				tempArr[tempIdx] = card;
 				tempIdx++;
 			}
@@ -68,4 +73,5 @@ public class kartDeste {
 		}
 		return tempArr;
 	}
+	
 }
